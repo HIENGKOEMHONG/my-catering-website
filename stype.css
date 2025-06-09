@@ -1,0 +1,288 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.current-date {
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+}
+
+.input-section, .search-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.input-section input,
+.input-section select,
+.search-section input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-width: 150px;
+}
+
+/* Base button styling */
+button {
+    padding: 10px 15px;
+    background-color: #007bff; /* Primary blue */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Slightly more rounded */
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out; /* Smooth transition */
+    white-space: nowrap;
+    font-size: 1em;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-1px); /* Slight lift */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+button:active {
+    background-color: #004085; /* Even darker on click */
+    transform: translateY(0); /* Press down effect */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.order-list {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    border: 1px solid #eee;
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f8f8f8;
+    color: #555;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.actions-cell button {
+    margin-right: 5px;
+    padding: 8px 12px;
+    font-size: 0.9em;
+}
+
+.actions-cell .edit-btn {
+    background-color: #28a745; /* Green */
+}
+
+.actions-cell .edit-btn:hover {
+    background-color: #218838;
+}
+
+.actions-cell .delete-btn {
+    background-color: #dc3545; /* Red */
+}
+
+.actions-cell .delete-btn:hover {
+    background-color: #c82333;
+}
+
+.actions-section {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+/* Navigation links as clickable boxes */
+.navigation-links {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the links */
+    gap: 20px; /* Space between the boxes */
+    margin-bottom: 25px;
+    flex-wrap: wrap; /* Allow wrapping onto new lines if space is limited */
+}
+
+.nav-button {
+    display: block; /* Make the anchor tag a block element */
+    width: 200px; /* Fixed width for the box */
+    padding: 25px 20px; /* More padding for a larger click area */
+    background-color: #4CAF50; /* A pleasant green */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px; /* More pronounced rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Deeper shadow for a "lifted" effect */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    font-size: 1.2em; /* Larger font size */
+    font-weight: bold;
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 1px;
+}
+
+.nav-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: translateY(-5px); /* Lift the box even more on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+.nav-button:active {
+    background-color: #3e8e41; /* Even darker green on click */
+    transform: translateY(0); /* "Press" effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Reduced shadow on click */
+}
+
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #f0f0f0;
+    margin: 30px 0;
+}
+
+/* Date selection section */
+.date-selection-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center; /* Center the date selector */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.date-selection-section label {
+    font-weight: bold;
+    color: #555;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.date-selection-section input[type="date"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    min-width: 150px;
+    flex-grow: 1; /* Allow it to grow */
+    max-width: 200px; /* Max width to keep it neat */
+}
+
+/* Ensure the date input is not editable on sub-pages but still styled */
+.date-selection-section input[type="date"][readonly] {
+    background-color: #f9f9f9;
+    cursor: default;
+}
+
+/* Print specific styles */
+@media print {
+    body {
+        background-color: #fff;
+        padding: 0;
+    }
+    .container {
+        box-shadow: none;
+        padding: 0;
+        max-width: none;
+        width: auto;
+    }
+    /* Hide interactive elements and navigation when printing */
+    .input-section, .search-section, .actions-section, .actions-cell, .navigation-links, .date-selection-section {
+        display: none; 
+    }
+    table, h2, .current-date {
+        page-break-inside: avoid; /* Avoid breaking tables/headings across pages */
+    }
+    /* Ensure tables expand correctly for printing */
+    table {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+    th, td {
+        border: 1px solid #ccc !important; /* Thicker borders for print clarity */
+        padding: 8px;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    .input-section, .search-section, .actions-section, .navigation-links, .date-selection-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .input-section input,
+    .input-section select,
+    .search-section input,
+    button,
+    .nav-button {
+        width: 100%; /* Full width on smaller screens */
+        min-width: unset;
+        max-width: unset;
+    }
+    .nav-button {
+        padding: 20px 15px; /* Slightly less padding for smaller buttons */
+        font-size: 1.1em;
+    }
+    .actions-cell button {
+        width: auto; /* Reset width for edit/delete buttons */
+    }
+    .actions-section button {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 10px; /* Add bottom margin for stacking */
+    }
+    .actions-section {
+        justify-content: center; /* Center buttons when stacked */
+    }
+}

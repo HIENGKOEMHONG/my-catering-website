@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASTE Restaurant Daily Order - Main Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>TASTE Restaurant Daily Order List</h1>
+        <p class="current-date">Order Date: <span id="displayDate"></span></p>
+
+        <div class="date-selection-section">
+            <label for="orderDateInput">Select Order Date:</label>
+            <input type="date" id="orderDateInput">
+        </div>
+        <hr>
+
+        <div class="navigation-links">
+            <a href="fruits.html" class="nav-button">View Fruits Order</a>
+            <a href="beverages.html" class="nav-button">View Beverages Order</a>
+        </div>
+        <hr>
+
+        <h2>Add/Update Items</h2>
+        <div class="input-section">
+            <input type="text" id="itemName" placeholder="Item Name">
+            <input type="text" id="itemQuantity" placeholder="Quantity (e.g., 5pcs, 5kg, 12box)">
+            <select id="itemCategory">
+                <option value="Fruits">Fruits</option>
+                <option value="Baverages">Baverages</option>
+            </select>
+            <button id="addItemBtn">Add Item</button>
+            <button id="updateItemBtn" style="display: none;">Update Item</button>
+        </div>
+
+        <div class="search-section">
+            <input type="text" id="searchItem" placeholder="Search by name...">
+            <button id="searchBtn">Search</button>
+            <button id="clearSearchBtn">Clear Search</button>
+        </div>
+
+        <div class="order-list">
+            <h2>Fruits Summary</h2>
+            <table id="fruitsTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Quantity</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+
+            <h2>Baverages Summary</h2>
+            <table id="baveragesTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Quantity</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </div>
+
+        <div class="actions-section">
+            <button id="printBtn">Print Order List</button>
+            <button id="copyTextBtn">Copy All Order Text</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

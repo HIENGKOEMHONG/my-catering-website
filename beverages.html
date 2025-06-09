@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASTE Restaurant - Beverages Order</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Beverages Order List</h1>
+        <p class="current-date">Order Date: <span id="displayDate"></span></p>
+
+        <div class="date-selection-section">
+            <label for="orderDateInput">Order Date:</label>
+            <input type="date" id="orderDateInput" readonly>
+        </div>
+        <hr>
+
+        <div class="navigation-links">
+            <a href="index.html" class="nav-button">Back to Main Dashboard</a>
+        </div>
+        <hr>
+
+        <div class="search-section">
+            <input type="text" id="searchItem" placeholder="Search beverages by name...">
+            <button id="searchBtn">Search</button>
+            <button id="clearSearchBtn">Clear Search</button>
+        </div>
+
+        <div class="order-list">
+            <h2>Baverages</h2>
+            <table id="baveragesTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Quantity</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </div>
+
+        <div class="actions-section">
+            <button id="printBtn">Print Beverages List</button>
+            <button id="copyTextBtn">Copy Beverages Text</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
